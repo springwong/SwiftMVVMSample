@@ -8,6 +8,7 @@
 
 import UIKit
 import Swinject
+import Moya
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         container in
         container.register(SimpleViewModel.self, factory: { (container) in
             SimpleViewModel()
+        })
+        
+        container.register(MoyaProvider<GithubService>.self, factory: { (container) in
+            MoyaProvider<GithubService>()
         })
     }
 

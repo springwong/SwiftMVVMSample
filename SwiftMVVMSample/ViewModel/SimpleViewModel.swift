@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import Moya
 
 class SimpleViewModel {
-    
+     lazy var githubService : MoyaProvider<GithubService> = (UIApplication.shared.delegate as! AppDelegate).getContainer().resolve(MoyaProvider<GithubService>.self)!
 }
