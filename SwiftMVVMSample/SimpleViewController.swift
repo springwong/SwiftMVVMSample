@@ -10,6 +10,7 @@ import UIKit
 
 class SimpleViewController: UIViewController {
     
+    @IBOutlet weak var tvTitle: UILabel!
     lazy var simpleViewModel : SimpleViewModel = getAppDelegate().getContainer().resolve(SimpleViewModel.self)!
 
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class SimpleViewController: UIViewController {
         _ = simpleViewModel.getMyProfile().subscribe { (event) in
             switch event {
             case let .success(response) :
+                self.tvTitle.text = response.login
                 print(response.toJSONString(prettyPrint: true))
                 break
             case let .error(error) :

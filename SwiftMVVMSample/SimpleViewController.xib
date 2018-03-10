@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleViewController" customModule="SwiftMVVMSample" customModuleProvider="target">
             <connections>
+                <outlet property="tvTitle" destination="OJm-K4-0O8" id="0Mq-vp-Map"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
