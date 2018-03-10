@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleViewController" customModule="SwiftMVVMSample" customModuleProvider="target">
             <connections>
+                <outlet property="btnNext" destination="bcn-RG-IES" id="BsA-QE-DNE"/>
                 <outlet property="tvTitle" destination="OJm-K4-0O8" id="0Mq-vp-Map"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,12 +28,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcn-RG-IES">
+                    <rect key="frame" x="10" y="61" width="355" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="OJm-K4-0O8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="2tX-A1-ZyT"/>
                 <constraint firstItem="OJm-K4-0O8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="5CE-3B-f1m"/>
+                <constraint firstItem="bcn-RG-IES" firstAttribute="trailing" secondItem="OJm-K4-0O8" secondAttribute="trailing" id="VIY-h2-64O"/>
+                <constraint firstItem="bcn-RG-IES" firstAttribute="top" secondItem="OJm-K4-0O8" secondAttribute="bottom" constant="10" id="n7j-Xk-GuX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OJm-K4-0O8" secondAttribute="trailing" constant="10" id="tMk-QP-tuH"/>
+                <constraint firstItem="bcn-RG-IES" firstAttribute="leading" secondItem="OJm-K4-0O8" secondAttribute="leading" id="vSc-ty-Dzo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
