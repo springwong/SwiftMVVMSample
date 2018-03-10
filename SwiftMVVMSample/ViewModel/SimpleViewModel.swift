@@ -11,9 +11,14 @@ import Moya
 import RxSwift
 
 class SimpleViewModel {
-     lazy fileprivate var githubService : MoyaProvider<GithubService> = (UIApplication.shared.delegate as! AppDelegate).getContainer().resolve(MoyaProvider<GithubService>.self)!
+    fileprivate var githubService : MoyaProvider<GithubService>// = (UIApplication.shared.delegate as! AppDelegate).getContainer().resolve(MoyaProvider<GithubService>.self)!
     
     private var user : User? = nil
+    
+    init(service : MoyaProvider<GithubService>) {
+        githubService = service
+    }
+    
     func getMyProfile() -> Single<User>{
         if let user = user {
             return Single.just(user)

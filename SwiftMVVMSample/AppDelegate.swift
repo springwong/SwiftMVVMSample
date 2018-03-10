@@ -17,12 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var container = Container() {
         container in
-        container.register(SimpleViewModel.self, factory: { (container) in
-            SimpleViewModel()
-        }).inObjectScope(ObjectScope.container)
         
         container.register(MoyaProvider<GithubService>.self, factory: { (container) in
             MoyaProvider<GithubService>()
+        }).inObjectScope(ObjectScope.container)
+        
+        container.register(SimpleViewModel.self, factory: { (container) in
+            SimpleViewModel(service: container.resolve(MoyaProvider<GithubService>.self)!)
         }).inObjectScope(ObjectScope.container)
     }
 
