@@ -11,10 +11,23 @@ import UIKit
 class DetailViewController: UIViewController {
     lazy var simpleViewModel : SimpleViewModel = getAppDelegate().getContainer().resolve(SimpleViewModel.self)!
 
+    @IBOutlet weak var btnPush: UIButton!
+    @IBOutlet weak var tvTitle: UILabel!
+    @IBOutlet weak var tvLastUpdatedDate: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        _ = simpleViewModel.getMyProfile().subscribe(onSuccess: { (user) in
+            self.tvTitle.text = user.login
+            self.tvLastUpdatedDate.text = user.updated_at
+        }) { (error) in
+            print(error)
+        }
+        
+        btnPush.rx.tap.bind {
+            self.navigationController?.pushViewController(DetailViewController(), animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
