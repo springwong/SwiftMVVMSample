@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         container in
         container.register(SimpleViewModel.self, factory: { (container) in
             SimpleViewModel()
-        })
+        }).inObjectScope(ObjectScope.container)
         
         container.register(MoyaProvider<GithubService>.self, factory: { (container) in
             MoyaProvider<GithubService>()
-        })
+        }).inObjectScope(ObjectScope.container)
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
