@@ -14,6 +14,7 @@ PODS:
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
+  - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
   - Swinject (2.2.0)
 
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.1)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SnapKit (~> 4.0.0)
   - SwiftyJSON
   - Swinject
 
@@ -35,9 +37,10 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Swinject: 4ca48bca7de5f398229a26abe1ac902b9f3ee541
 
-PODFILE CHECKSUM: a74fcd2f925331de91bc93f4f36907699fe42bb2
+PODFILE CHECKSUM: 2c59bdcf7118345ed7976b48adc2b87341375294
 
 COCOAPODS: 1.4.0

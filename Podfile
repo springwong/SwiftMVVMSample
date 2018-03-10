@@ -14,6 +14,7 @@ target 'SwiftMVVMSample' do
   pod 'SwiftyJSON'
   pod 'ObjectMapper', '~> 3.1'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'SnapKit', '~> 4.0.0'
 
   target 'SwiftMVVMSampleTests' do
     inherit! :search_paths
