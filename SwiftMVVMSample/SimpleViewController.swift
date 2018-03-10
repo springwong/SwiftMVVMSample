@@ -16,7 +16,21 @@ class SimpleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        _ = simpleViewModel.getMyProfile().subscribe { (event) in
+            switch event {
+            case let .success(response) :
+                do {
+                    let value = try response.mapString()
+                    print(value)
+                }catch {
+                    
+                }
+                break
+            case let .error(error) :
+                print(error)
+                break
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

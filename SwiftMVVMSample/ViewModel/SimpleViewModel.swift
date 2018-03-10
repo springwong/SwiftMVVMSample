@@ -8,7 +8,13 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 class SimpleViewModel {
-     lazy var githubService : MoyaProvider<GithubService> = (UIApplication.shared.delegate as! AppDelegate).getContainer().resolve(MoyaProvider<GithubService>.self)!
+     lazy fileprivate var githubService : MoyaProvider<GithubService> = (UIApplication.shared.delegate as! AppDelegate).getContainer().resolve(MoyaProvider<GithubService>.self)!
+    
+    
+    func getMyProfile() -> Single<Response>{
+        return githubService.rx.request(.myProfile)
+    }
 }
