@@ -16,12 +16,10 @@ class SimpleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _ = simpleViewModel.getMyProfile().mapString().map({ (json) in
-            User(JSONString: json)
-        }).subscribe { (event) in
+        _ = simpleViewModel.getMyProfile().subscribe { (event) in
             switch event {
             case let .success(response) :
-                print(response?.toJSONString(prettyPrint: true))
+                print(response.toJSONString(prettyPrint: true))
                 break
             case let .error(error) :
                 print(error)

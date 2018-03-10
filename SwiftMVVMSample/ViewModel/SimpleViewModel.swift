@@ -14,7 +14,7 @@ class SimpleViewModel {
      lazy fileprivate var githubService : MoyaProvider<GithubService> = (UIApplication.shared.delegate as! AppDelegate).getContainer().resolve(MoyaProvider<GithubService>.self)!
     
     
-    func getMyProfile() -> Single<Response>{
-        return githubService.rx.request(.myProfile)
+    func getMyProfile() -> Single<User>{
+        return githubService.rx.request(.myProfile).toMappable()
     }
 }
