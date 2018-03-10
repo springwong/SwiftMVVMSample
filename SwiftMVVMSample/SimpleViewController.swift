@@ -9,6 +9,8 @@
 import UIKit
 
 class SimpleViewController: UIViewController {
+    
+    lazy var simpleViewModel : SimpleViewModel = getAppDelegate().getContainer().resolve(SimpleViewModel.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
