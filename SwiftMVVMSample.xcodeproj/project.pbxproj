@@ -14,6 +14,7 @@
 		6F348BCA20542F1B0093BF72 /* SwiftMVVMSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F348BC920542F1B0093BF72 /* SwiftMVVMSampleUITests.swift */; };
 		6F348BD920542FE30093BF72 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F348BD720542FE30093BF72 /* SimpleViewController.swift */; };
 		6F348BDA20542FE30093BF72 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F348BD820542FE30093BF72 /* SimpleViewController.xib */; };
+		6F8E0C662054460000A66D4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E0C652054460000A66D4A /* User.swift */; };
 		6FCA88E5205438210030E9B4 /* SimpleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA88E4205438210030E9B4 /* SimpleViewModel.swift */; };
 		6FCA88E8205439980030E9B4 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA88E7205439980030E9B4 /* ViewControllerExtension.swift */; };
 		6FCA88EB20543B970030E9B4 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA88EA20543B970030E9B4 /* GithubService.swift */; };
@@ -55,6 +56,7 @@
 		6F348BCB20542F1B0093BF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F348BD720542FE30093BF72 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		6F348BD820542FE30093BF72 /* SimpleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
+		6F8E0C652054460000A66D4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6FCA88E4205438210030E9B4 /* SimpleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewModel.swift; sourceTree = "<group>"; };
 		6FCA88E7205439980030E9B4 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		6FCA88EA20543B970030E9B4 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				6FCA88EA20543B970030E9B4 /* GithubService.swift */,
+				6F8E0C652054460000A66D4A /* User.swift */,
 			);
 			path = moya;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			files = (
 				6FCA88E8205439980030E9B4 /* ViewControllerExtension.swift in Sources */,
 				6F348BD920542FE30093BF72 /* SimpleViewController.swift in Sources */,
+				6F8E0C662054460000A66D4A /* User.swift in Sources */,
 				6F348BAA20542F1A0093BF72 /* AppDelegate.swift in Sources */,
 				6FCA88EB20543B970030E9B4 /* GithubService.swift in Sources */,
 				6FCA88E5205438210030E9B4 /* SimpleViewModel.swift in Sources */,
