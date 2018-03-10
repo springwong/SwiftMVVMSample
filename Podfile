@@ -11,6 +11,9 @@ target 'SwiftMVVMSample' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'Alamofire', '~> 4.7'
   pod 'Moya/RxSwift', '~> 11.0'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper', '~> 3.1'
+  pod 'AlamofireObjectMapper', '~> 5.0'
 
   target 'SwiftMVVMSampleTests' do
     inherit! :search_paths
