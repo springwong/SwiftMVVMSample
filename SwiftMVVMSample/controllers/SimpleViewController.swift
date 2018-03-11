@@ -8,31 +8,32 @@
 
 import UIKit
 import RxCocoa
+import RxSwift
 
 class SimpleViewController: UIViewController {
     
     @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var btnNext: UIButton!
     lazy var simpleViewModel : SimpleViewModel = container.resolve(SimpleViewModel.self)!
-
+    var dispostBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _ = simpleViewModel.getMyProfile().subscribe { (event) in
+        simpleViewModel.getMyProfile().subscribe { (event) in
             switch event {
             case let .success(response) :
                 self.tvTitle.text = response.login
-                print(response.toJSONString(prettyPrint: true))
+//                print(response.toJSONString(prettyPrint: true))
                 break
             case let .error(error) :
                 print(error)
                 break
             }
-        }
-        _ = btnNext.rx.tap.bind {
+        }.disposed(by: dispostBag)
+        btnNext.rx.tap.bind {
             self.navigationController?.pushViewController(DetailViewController(), animated: true)
-        }
+        }.disposed(by: dispostBag)
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class DetailViewController: UIViewController {
     lazy var simpleViewModel : SimpleViewModel = container.resolve(SimpleViewModel.self)!
@@ -15,25 +16,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var btnPopAndPush: UIButton!
     @IBOutlet weak var tvLastUpdatedDate: UILabel!
+    
+    var dispostBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        _ = simpleViewModel.getMyProfile().subscribe(onSuccess: { (user) in
+        simpleViewModel.getMyProfile().subscribe(onSuccess: { (user) in
             self.tvTitle.text = user.login
             self.tvLastUpdatedDate.text = user.updated_at
         }) { (error) in
             print(error)
-        }
+        }.disposed(by: dispostBag)
         
         btnPush.rx.tap.bind {
             self.navigationController?.pushViewController(DetailViewController(), animated: true)
-        }
+        }.disposed(by: dispostBag)
         
         btnPopAndPush.rx.tap.bind {
             self.navigationController?.popToRootViewController(animated: true)
 //            self.navigationController?.pushViewController(DetailViewController(), animated: true)
-        }
+        }.disposed(by: dispostBag)
     }
 
     override func didReceiveMemoryWarning() {
