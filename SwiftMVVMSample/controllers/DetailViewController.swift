@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var btnPush: UIButton!
     @IBOutlet weak var tvTitle: UILabel!
+    @IBOutlet weak var btnPopAndPush: UIButton!
     @IBOutlet weak var tvLastUpdatedDate: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,11 @@ class DetailViewController: UIViewController {
         
         btnPush.rx.tap.bind {
             self.navigationController?.pushViewController(DetailViewController(), animated: true)
+        }
+        
+        btnPopAndPush.rx.tap.bind {
+            self.navigationController?.popToRootViewController(animated: true)
+//            self.navigationController?.pushViewController(DetailViewController(), animated: true)
         }
     }
 

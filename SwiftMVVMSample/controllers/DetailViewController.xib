@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="SwiftMVVMSample" customModuleProvider="target">
             <connections>
+                <outlet property="btnPopAndPush" destination="ead-V6-f3q" id="SfV-mN-1Ri"/>
                 <outlet property="btnPush" destination="wfH-Nl-Vex" id="ylN-aS-ITQ"/>
                 <outlet property="tvLastUpdatedDate" destination="u7C-2H-ZQG" id="XPf-YD-COc"/>
                 <outlet property="tvTitle" destination="8r3-er-cLx" id="vBT-D4-mEs"/>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GV9-x0-m9d">
-                    <rect key="frame" x="0.0" y="20" width="375" height="140"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="178"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZRe-YN-7Fh">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
@@ -60,6 +61,10 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-Nl-Vex">
                             <rect key="frame" x="0.0" y="110" width="375" height="30"/>
                             <state key="normal" title="Click to push"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ead-V6-f3q">
+                            <rect key="frame" x="0.0" y="148" width="375" height="30"/>
+                            <state key="normal" title="Pop To Root and push"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0012486093739999999" green="1" blue="0.0019371473550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
