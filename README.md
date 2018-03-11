@@ -18,3 +18,6 @@ https://github.com/SwiftyJSON/SwiftyJSON
 
 Coding Layout:
 https://github.com/SnapKit/SnapKit
+
+Github API:
+https://developer.github.com/v3/
