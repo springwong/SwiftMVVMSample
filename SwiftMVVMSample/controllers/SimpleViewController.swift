@@ -13,7 +13,7 @@ class SimpleViewController: UIViewController {
     
     @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var btnNext: UIButton!
-    lazy var simpleViewModel : SimpleViewModel = getAppDelegate().getContainer().resolve(SimpleViewModel.self)!
+    lazy var simpleViewModel : SimpleViewModel = container.resolve(SimpleViewModel.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()

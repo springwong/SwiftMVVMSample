@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    lazy var simpleViewModel : SimpleViewModel = getAppDelegate().getContainer().resolve(SimpleViewModel.self)!
+    lazy var simpleViewModel : SimpleViewModel = container.resolve(SimpleViewModel.self)!
 
     @IBOutlet weak var btnPush: UIButton!
     @IBOutlet weak var tvTitle: UILabel!
